@@ -32,3 +32,9 @@ def test_feedback():
   turn = Turn("Juneau", card)
 
   assert turn.feedback() == "Correct!"
+
+def test_feedback_incorrect():
+  card = Card("What is the capital of Alaska?", "Juneau", "Geography")
+  turn = Turn("Anchorage", card)
+
+  assert turn.feedback() == "Incorrect."
